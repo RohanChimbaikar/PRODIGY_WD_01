@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Responsive Navigation Bar</title>
+
+  <!-- Google Font -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="Logo.png" alt="Logo" id="bulb" />
+      Prodigy Infotech
+    </div>
+
+    <!-- Hidden checkbox toggles the menu -->
+    <input type="checkbox" id="menu-toggle" />
+
+    <!-- Hamburger button -->
+    <label for="menu-toggle" class="menu-btn">
+        <i class="fa-solid fa-bars open-icon"></i>     <!-- Hamburger icon -->
+        <i class="fa-solid fa-xmark close-icon"></i>   <!-- Close (X) icon -->
+      </label>
+    
+    
+
+    <!-- Navigation links -->
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Internships</a></li>
+      <li><a href="#">FAQs</a></li>
+      <li><a href="#">Feedback</a></li>
+    </ul>
+  </nav>
+  <div class="hero-section">
+    <h1>Prodigy InfoTech</h1>
+    <p>Providing World Class E-Learning Experience with Real World Internships</p>
+  </div>
+  
+  <!-- Additional Scroll Sections -->
+  <section class="info-block">
+    <h2>Why Choose Us?</h2>
+    <p>We offer industry-relevant training, expert mentorship, and real project experience to help you become job-ready.</p>
+  </section>
+  
+  <section class="info-block alt">
+    <h2>Explore Our Internships</h2>
+    <p>From Web Development to Data Science, our internships are built for hands-on learning and career growth.</p>
+  </section>
+  
+  <section class="info-block">
+    <h2>Our Vision</h2>
+    <p>Empowering students with practical knowledge, confidence, and the skills needed to thrive in a competitive digital world.</p>
+  </section>
+  
+
+  <script src="index.js"></script>
+</body>
+</html>
