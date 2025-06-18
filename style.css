@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  padding-top: 80px;
+}
+
+/* NAVIGATION */
+nav {
+  height: 80px;
+  background-color: #102E50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+nav.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  transform: scale(1.01);
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  font-size: 23px;
+  color: #fff;
+  font-weight: 600;
+  gap: 10px;
+}
+
+nav .logo img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+/* MENU TOGGLE */
+#menu-toggle {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-btn i {
+  font-size: 28px;
+  color: #F5C45E;
+  cursor: pointer;
+}
+
+.menu-btn .open-icon {
+  display: block;
+}
+
+.menu-btn .close-icon {
+  display: none;
+}
+
+#menu-toggle:checked + .menu-btn .open-icon {
+  display: none !important;
+}
+
+#menu-toggle:checked + .menu-btn .close-icon {
+  display: block !important;
+}
+
+/* MENU ITEMS */
+nav .menu {
+  display: flex;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+
+nav .menu li {
+  margin: 0 10px;
+}
+
+nav .menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav .menu li a:hover {
+  background-color: #00EFFF;
+  color: #102E50;
+}
+
+/* HERO SECTION */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  color: #102E50;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  color: #333;
+  max-width: 700px;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* INFO BLOCKS */
+.info-block {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f4f8fc;
+  color: #102E50;
+}
+
+.info-block.alt {
+  background-color: #e8f1f9;
+}
+
+.info-block h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.info-block p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.internship-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px 20px;
+  text-align: center;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #102E50;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.card-btn {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px 18px;
+  background-color: #00EFFF;
+  color: #102E50;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: #00d4e0;
+}
+
+
+/* GLOW EFFECT ON LOGO */
+#bulb.glow {
+  filter: drop-shadow(0 0 10px #ffd700);
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 940px) {
+  .menu-btn {
+    display: block;
+  }
+
+  nav .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: #102E50;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  }
+
+  #menu-toggle:checked ~ .menu {
+    max-height: 100vh;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  nav .menu li {
+    margin: 20px 0;
+  }
+
+  nav .menu li a {
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+.feedback-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback-form textarea {
+  width: 90%;
+  max-width: 600px;
+  min-height: 120px;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.feedback-form textarea:focus {
+  border-color: #00EFFF;
+  box-shadow: 0 0 8px rgba(0, 239, 255, 0.3);
+}
+
+.feedback-form button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: #00EFFF;
+  border: none;
+  color: #102E50;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.feedback-form button:hover {
+  background-color: #00d4e0;
+  transform: scale(1.03);
+}
+footer {
+  background-color: #102E50;
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 16px;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer-links {
+  margin-top: 15px;
+}
+
+.footer-links a {
+  color: #F5C45E;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00EFFF;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navigation Bar</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="Logo.png" alt="Logo" id="bulb" />
+      Prodigy Infotech
+    </div>
+
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-btn">
+      <i class="fa-solid fa-bars open-icon"></i>
+      <i class="fa-solid fa-xmark close-icon"></i>
+    </label>
+
+    <ul class="menu">
+      <li><a href="#home" onclick="closeMenu()">Home</a></li>
+      <li><a href="#about" onclick="closeMenu()">About</a></li>
+      <li><a href="#internships" onclick="closeMenu()">Internships</a></li>
+
+      <li><a href="#feedback" onclick="closeMenu()">Feedback</a></li>
+    </ul>
+  </nav>
+
+<!-- HERO SECTION -->
+<div class="hero-section" id="home">
+  <h1>Prodigy InfoTech</h1>
+  <p>Providing World Class E-Learning Experience with Real World Internships</p>
+</div>
+
+<!-- INFO BLOCKS -->
+<section class="info-block" id="about">
+  <h2>Why Choose Us?</h2>
+  <p>We offer industry-relevant training, expert mentorship, and real project experience to help you become job-ready.</p>
+</section>
+
+<section class="info-block alt" id="internships">
+  <h2>Explore Our Internships</h2>
+  <p>Hands-on learning experiences across various domains. Choose your path below.</p>
+
+  <div class="internship-cards">
+    <div class="card">
+      <h3>Web Development</h3>
+      <p>Build responsive websites and dynamic frontends using HTML, CSS, JavaScript, and frameworks.</p>
+      <a href="#" class="card-btn">Apply Now</a>
+    </div>
+
+    <div class="card">
+      <h3>Data Science</h3>
+      <p>Learn data analysis, visualization, and machine learning using Python, Pandas, and Scikit-learn.</p>
+      <a href="#" class="card-btn">Apply Now</a>
+    </div>
+
+    <div class="card">
+      <h3>Machine Learning</h3>
+      <p>Dive deep into supervised, unsupervised learning, and model deployment with real datasets.</p>
+      <a href="#" class="card-btn">Apply Now</a>
+    </div>
+
+    <div class="card">
+      <h3>Android Development</h3>
+      <p>Create modern Android apps using Java/Kotlin, UI design principles, and Firebase integration.</p>
+      <a href="#" class="card-btn">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="info-block" id="faqs">
+  <h2>Our Vision</h2>
+  <p>Empowering students with practical knowledge, confidence, and the skills needed to thrive in a competitive digital world.</p>
+</section>
+
+<section class="info-block" id="feedback">
+  <h2>Feedback</h2>
+  <p>We value your input and strive to improve continuously based on your suggestions and reviews.</p>
+
+  <form class="feedback-form" onsubmit="event.preventDefault(); sendFeedback();">
+    <textarea id="feedbackText" placeholder="Write your feedback here..."></textarea>
+    <button type="submit">Send Feedback</button>
+  </form>
+</section>
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Prodigy InfoTech. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#internships">Internships</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#feedback">Feedback</a>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
