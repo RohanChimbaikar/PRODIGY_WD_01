@@ -353,3 +353,30 @@ footer {
 .footer-links a:hover {
   color: #00EFFF;
 }
+/* Wrapper for nav content to control layout */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Adjust nav padding for smaller screens */
+@media (max-width: 940px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .menu-btn {
+    right: 20px; /* reduce from 50px */
+  }
+
+  .logo img {
+    height: 36px;
+    width: 36px;
+  }
+}
